@@ -1,0 +1,926 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+}
+
+div {
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.4));
+  text-shadow: 0px 1px 35px rgba(0, 43, 82, 0.4);
+}
+
+p {
+  text-shadow: 0px 1px 35px rgba(0, 43, 82, 0.4);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/*Header*/
+#header {
+  width: 100%;
+  height: 7%;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 27px;
+  z-index: 999;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url(../assets/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  height: 100%;
+  margin-left: 2rem;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+@media all and (max-width: 1400px) {
+  .logo {
+    margin-left: 0.5rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .logo {
+    margin-left: 0px;
+  }
+}
+
+.logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.header_cositas {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 0px;
+  width: 42%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (max-width: 1400px) {
+  .header_cositas {
+    font-size: 1.3rem;
+    width: 62%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .header_cositas {
+    width: 74%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .header_cositas {
+    font-size: 0.8rem;
+    width: 83%;
+  }
+}
+
+.header_cositas a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.header_hover {
+  color: #AAB7B8;
+}
+
+.header_hover:hover {
+  color: #e8f4f5;
+}
+
+/* Home */
+.portada {
+  display: inline-block;
+  width: 100%;
+  height: 93vh;
+  background-image: url(../assets/portada2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 0.3fr 1.7fr;
+      grid-template-rows: 0.3fr 1.7fr;
+      grid-template-areas: "title title" "semititle trailer";
+}
+
+@media all and (max-width: 992px) {
+  .portada {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.3fr 0.8fr 1.4fr;
+        grid-template-rows: 0.3fr 0.8fr 1.4fr;
+    gap: 0px;
+        grid-template-areas: "title" "semititle" "trailer";
+  }
+}
+
+@media all and (max-width: 576px) {
+  .portada {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 0.3fr 1.3fr 1.4fr;
+        grid-template-rows: 0.3fr 1.3fr 1.4fr;
+        grid-template-areas: "title" "semititle" "trailer";
+  }
+}
+
+.portada .ptitle {
+  margin-top: 3rem;
+}
+
+@media all and (max-width: 1400px) {
+  .portada .ptitle {
+    margin-top: 0.5rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .portada .ptitle {
+    margin-top: 1rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .portada .ptitle {
+    margin-top: 2rem;
+  }
+}
+
+.portada_resumenTitle {
+  font-size: 62px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+@media all and (max-width: 1400px) {
+  .portada_resumenTitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .portada_resumenTitle {
+    font-size: 2.1rem;
+  }
+}
+
+.portada_resumen {
+  color: #BFC9CA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.2rem;
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: semititle;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 3rem;
+  font-weight: 700;
+}
+
+@media all and (max-width: 1400px) {
+  .portada_resumen {
+    font-size: 1.8rem;
+    padding: 0px 0.5rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .portada_resumen {
+    font-size: 1.5rem;
+    padding: 0px 0rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .portada_resumen {
+    font-size: 1rem;
+    padding: 0px 1rem;
+  }
+}
+
+.portada_trailer {
+  display: inline-block;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: trailer;
+  padding: 13% 5%;
+}
+
+@media all and (max-width: 1400px) {
+  .portada_trailer {
+    width: 80%;
+    height: 60%;
+    padding: 15% 10%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .portada_trailer {
+    width: 74%;
+    height: 90%;
+    padding: 0% 12%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .portada_trailer {
+    width: 80%;
+    height: 80%;
+    padding: 0% 10%;
+  }
+}
+
+.ptitle {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fdfefe;
+  text-align: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 1400px) {
+  .ptitle {
+    font-size: 3rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .ptitle {
+    font-size: 2.88rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .ptitle {
+    font-size: 2.5rem;
+  }
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fdfefe;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media all and (max-width: 1400px) {
+  .title {
+    font-size: 3.38rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .title {
+    font-size: 1.9rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+/*fondo de pags*/
+/* Pagina Clase */
+.imagenDeFondo1 {
+  background-image: url(../assets/paisaje.jpg);
+  display: inline-block;
+  width: 100%;
+  height: 93vh;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.imagenDeFondo1 .semiTitle {
+  color: #cad7d9;
+  width: 40%;
+}
+
+.imagenDeFondo1 .accordion-item {
+  background-image: url(../assets/gameplayback.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imagenDeFondo1 .accordion-button {
+  background-image: url(../assets/accordion2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo1 .accordion-button {
+    padding: 10px;
+  }
+}
+
+.imagenDeFondo1 .accordion {
+  --bs-accordion-border-color: #000;
+  --bs-accordion-inner-border-radius: 0px;
+  --bs-accordion-active-color:#1872f9;
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo1 .accordion {
+    min-width: 80%;
+  }
+}
+
+.imagenDeFondo1 img {
+  max-height: 60vh;
+  max-width: 41%;
+}
+
+.imagenDeFondo1 .accordion .fs-6 {
+  font-size: 1.15rem !important;
+}
+
+@media all and (max-width: 1400px) {
+  .imagenDeFondo1 .accordion .fs-6 {
+    font-size: 1rem !important;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo1 .accordion .fs-6 {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo1 .fs-4 {
+    font-size: 1rem !important;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo1 img {
+    max-height: 26vh;
+    max-width: 65%;
+  }
+}
+
+.semiTitle {
+  font-size: 1.56rem;
+  color: #1b2631;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+@media all and (max-width: 1400px) {
+  .semiTitle {
+    font-size: 1.3rem;
+    width: 85%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .semiTitle {
+    font-size: 1rem;
+    width: 94%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .semiTitle {
+    font-size: 0.9rem;
+    width: 98%;
+    margin-top: 0.1rem;
+  }
+}
+
+.semiTitle_encabezado {
+  font-size: 1.9rem;
+  color: #1b2631;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media all and (max-width: 1400px) {
+  .semiTitle_encabezado {
+    font-size: 1.7rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .semiTitle_encabezado {
+    font-size: 1.3rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .semiTitle_encabezado {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+}
+
+#containerClase {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (max-width: 992px) {
+  #containerClase {
+    padding-top: 2rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  #containerClase {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* pagina de las zonas */
+.imagenDeFondo2 {
+  background-image: url(../assets/paisaje3.jpg);
+  display: inline-block;
+  width: 100%;
+  height: 93vh;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo2 .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo2 .title {
+    font-size: 2rem;
+  }
+}
+
+.zonas_contenedor {
+  width: 40%;
+  display: inline-block;
+}
+
+.zonas_title {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
+}
+
+.zonas_desc {
+  color: #BFC9CA;
+  font-size: 30px;
+}
+
+.hi {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 2rem;
+}
+
+@media all and (max-width: 992px) {
+  .hi {
+    padding: 0px;
+  }
+}
+
+#ZonasCarousel {
+  margin-top: 3rem;
+}
+
+#ZonasCarousel .carousel-indicators {
+  margin-bottom: -4rem;
+}
+
+@media all and (max-width: 992px) {
+  #ZonasCarousel .hero_title {
+    font-size: 1.5rem;
+  }
+  #ZonasCarousel .hero_desc {
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  #ZonasCarousel {
+    margin-top: 1rem;
+  }
+  #ZonasCarousel .flex-row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #ZonasCarousel .justify-content-center {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #ZonasCarousel .col-5 {
+    width: 93%;
+  }
+  #ZonasCarousel .hero_title {
+    font-size: 1.1rem;
+  }
+  #ZonasCarousel .hero_desc {
+    font-size: 0.9rem;
+  }
+}
+
+/*un poco de dragonriding*/
+.hero {
+  width: 100%;
+  height: 25vh;
+}
+
+.hero_contenedor {
+  display: inline-block;
+  width: 24%;
+  max-height: 100%;
+}
+
+.hero_title {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.hero_desc {
+  font-size: 20px;
+  color: #BFC9CA;
+  display: block;
+  text-align: center;
+}
+
+/* pagina gameplay */
+.imagenDeFondo4 {
+  background-image: url(../assets/gameplayback2.jpg);
+  display: inline-block;
+  width: 100%;
+  height: 93vh;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 0.3fr 0.3fr 2.4fr;
+      grid-template-rows: 0.3fr 0.3fr 2.4fr;
+  gap: 0px 0px;
+      grid-template-areas: "title title title" "semiTitle semiTitle semiTitle" "gameplay gameplay gameplay";
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo4 {
+    height: auto;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo4 {
+    height: 120vh;
+  }
+}
+
+.imagenDeFondo4 .ptitle {
+  font-size: 4.5rem;
+}
+
+@media all and (max-width: 1400px) {
+  .imagenDeFondo4 .ptitle {
+    font-size: 3.38rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo4 .ptitle {
+    font-size: 1.9rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo4 .ptitle {
+    font-size: 1.2rem;
+  }
+}
+
+.semiTitleGrid {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: semiTitle;
+}
+
+.gameplay {
+  width: 100%;
+  max-height: 100%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: gameplay;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-top: 1.5rem;
+}
+
+.gameplay .gameplay_desc a {
+  color: #b4df2f;
+}
+
+.gameplay .gameplay_desc a:hover {
+  color: #fffc00;
+  text-decoration: none;
+}
+
+@media all and (max-width: 1400px) {
+  .gameplay {
+    padding-top: 0.5rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .gameplay {
+    padding-top: 0.3rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.gameplay_contenedor {
+  display: inline-block;
+  width: 30%;
+  height: 90%;
+  max-height: 100%;
+  border: solid;
+  background-image: url(../assets/gameplayback.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 1400px) {
+  .gameplay_contenedor {
+    height: 95%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .gameplay_contenedor {
+    height: 52%;
+    width: 45%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .gameplay_contenedor {
+    height: 48%;
+    width: 46%;
+  }
+}
+
+.gameplay_title {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin: 1rem 0px;
+}
+
+@media all and (max-width: 1400px) {
+  .gameplay_title {
+    font-size: 1.55rem;
+    margin: 0.2rem 0px;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .gameplay_title {
+    font-size: 1.3rem;
+    margin: 0.2rem 0px;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .gameplay_title {
+    font-size: 1rem;
+    margin: 0px 0px;
+  }
+}
+
+.gameplay_desc {
+  font-size: 1.55rem;
+  color: #BFC9CA;
+  text-align: center;
+}
+
+@media all and (max-width: 1400px) {
+  .gameplay_desc {
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .gameplay_desc {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .gameplay_desc {
+    font-size: 0.8rem;
+  }
+}
+
+.gameplay_img {
+  display: block;
+  width: 100%;
+  max-height: 45%;
+  border-bottom: solid;
+}
+
+@media all and (max-width: 992px) {
+  .gameplay_img {
+    max-height: 55%;
+  }
+}
+
+.textGris {
+  color: #BFC9CA;
+}
+
+/* pagina de dragonriding */
+.imagenDeFondo3 {
+  background-image: url(../assets/dragones.jpg);
+  display: inline-block;
+  width: 100%;
+  height: 93vh;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo3 {
+    height: 145%;
+  }
+}
+
+.imagenDeFondo3 p {
+  margin-bottom: 0px;
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo3 .hero {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.imagenDeFondo3 .hero_desc {
+  color: #1b2631;
+}
+
+@media all and (max-width: 1400px) {
+  .imagenDeFondo3 .hero_desc {
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo3 .hero_desc {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .imagenDeFondo3 .hero_title {
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo3 .hero_title {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .imagenDeFondo3 .hero_contenedor {
+    width: 25%;
+  }
+}
+
+@media all and (max-width: 992px) {
+  .imagenDeFondo3 .hero_contenedor {
+    width: 32%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .imagenDeFondo3 .hero_contenedor {
+    width: 49%;
+  }
+}
+
+#dragonridingCarousel video {
+  height: 60vh;
+  max-width: 100%;
+}
+
+#dragonridingCarousel .carousel-indicators {
+  top: 0;
+}
+/*# sourceMappingURL=estilos.css.map */
