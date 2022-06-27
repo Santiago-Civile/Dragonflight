@@ -79,6 +79,94 @@ p, h1, h2 , h3, h4{
         }
     }
 }
+/* Menu hamburguesa */
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 4rem;
+    .logo {
+        justify-self: start;
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+    &-item a:hover {
+        text-decoration: underline;
+        color: #7bb8e0;
+    }
+    & .nav__links{
+        @media only screen and (max-width: 720px) {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            justify-content: start;
+            top: 55px;
+            background-color: #fff;
+            width: 100%;
+            height: calc(100vh - 55px);
+            transform: translate(-101%);
+            text-align: center;
+            overflow: hidden;
+            transition: .5s ease;    
+        }
+    }
+}
+.menu-toggle {
+    justify-self: end;
+    margin-right: 25px;
+    display: none;
+    align-self: center;
+    .bar{
+        width: 25px;
+        height: 3px;
+        background-color: #AAB7B8;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+#mobile-menu.is-active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+#mobile-menu.is-active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    -o-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
+@keyframes gradbar {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+.bar {
+    @media only screen and (max-width: 720px) {
+    display: block;
+    cursor: pointer;
+    }
+}
+.mobile-nav {
+    @media only screen and (max-width: 720px) {
+        transform: translate(0%) !important;
+    }
+}
 /* FOOTER */
 footer{
 	background-color: #171717;
@@ -348,6 +436,28 @@ footer img{
     @media all and (max-width: 576px){
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+.claseSeccion{
+	background-image: url(../assets/gameplayback2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+    @media all and (max-width: 576px){
+        height: 60vh;
+    }
+}
+#claseCarousel{
+	width: 60%;
+    &.carousel-inner{
+        max-height: 100%;
+    }
+    @media all and (max-width: 992px){
+        width: 100%;
     }
 }
 /* pagina de las zonas */

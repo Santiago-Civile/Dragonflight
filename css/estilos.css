@@ -95,6 +95,103 @@ p, h1, h2, h3, h4 {
   color: #e8f4f5;
 }
 
+/* Menu hamburguesa */
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 4rem;
+}
+.nav .logo {
+  justify-self: start;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.nav-item a:hover {
+  text-decoration: underline;
+  color: #7bb8e0;
+}
+@media only screen and (max-width: 720px) {
+  .nav .nav__links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: start;
+    top: 55px;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100vh - 55px);
+    transform: translate(-101%);
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s ease;
+  }
+}
+
+.menu-toggle {
+  justify-self: end;
+  margin-right: 25px;
+  display: none;
+  align-self: center;
+}
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #AAB7B8;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+}
+.menu-toggle:hover {
+  cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@-webkit-keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradbar {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .bar {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .mobile-nav {
+    transform: translate(0%) !important;
+  }
+}
+
 /* FOOTER */
 footer {
   background-color: #171717;
@@ -423,6 +520,34 @@ footer img {
   #containerClase {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+.claseSeccion {
+  background-image: url(../assets/gameplayback2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+@media all and (max-width: 576px) {
+  .claseSeccion {
+    height: 60vh;
+  }
+}
+
+#claseCarousel {
+  width: 60%;
+}
+#claseCarousel.carousel-inner {
+  max-height: 100%;
+}
+@media all and (max-width: 992px) {
+  #claseCarousel {
+    width: 100%;
   }
 }
 
