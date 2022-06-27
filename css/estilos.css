@@ -23,83 +23,12 @@ p, h1, h2, h3, h4 {
   font-weight: 700;
 }
 
-/*Header*/
-#header {
-  width: 100%;
-  height: 7%;
-  position: -webkit-sticky;
-  position: sticky;
-  font-size: 27px;
-  z-index: 999;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  background-image: url(../assets/header.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.logo {
-  height: 100%;
-  margin-left: 2rem;
-  transition: 0.3s ease-in-out;
-}
-@media all and (max-width: 1400px) {
-  .logo {
-    margin-left: 0.5rem;
-  }
-}
-@media all and (max-width: 576px) {
-  .logo {
-    margin-left: 0px;
-  }
-}
-.logo:hover {
-  transform: scale(1.1);
-}
-
-.header_cositas {
-  list-style-type: none;
-  display: flex;
-  padding-bottom: 0px;
-  width: 42%;
-  justify-content: space-evenly;
-  align-items: center;
-}
-@media all and (max-width: 1400px) {
-  .header_cositas {
-    font-size: 1.3rem;
-    width: 62%;
-  }
-}
-@media all and (max-width: 992px) {
-  .header_cositas {
-    width: 74%;
-  }
-}
-@media all and (max-width: 576px) {
-  .header_cositas {
-    font-size: 0.8rem;
-    width: 83%;
-  }
-}
-.header_cositas a {
-  display: inline-block;
-  text-decoration: none;
-}
-.header_hover {
-  color: #AAB7B8;
-}
-.header_hover:hover {
-  color: #e8f4f5;
-}
-
 /* Menu hamburguesa */
 .nav {
   display: grid;
   grid-template-columns: 1fr 3fr;
   height: 4rem;
+  flex-wrap: nowrap;
 }
 .nav .logo {
   justify-self: start;
@@ -124,6 +53,7 @@ p, h1, h2, h3, h4 {
     text-align: center;
     overflow: hidden;
     transition: 0.5s ease;
+    font-size: 2rem;
   }
 }
 
@@ -180,7 +110,7 @@ p, h1, h2, h3, h4 {
   }
 }
 @media only screen and (max-width: 720px) {
-  .bar {
+  .bar, .menu-toggle {
     display: block;
     cursor: pointer;
   }
@@ -190,6 +120,79 @@ p, h1, h2, h3, h4 {
   .mobile-nav {
     transform: translate(0%) !important;
   }
+}
+
+/*Header*/
+#header {
+  width: 100%;
+  height: 7%;
+  position: -webkit-sticky;
+  position: sticky;
+  font-size: 27px;
+  z-index: 999;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../assets/header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  height: 100%;
+  margin-left: 2rem;
+  transition: 0.3s ease-in-out;
+}
+@media all and (max-width: 1400px) {
+  .logo {
+    margin-left: 0.5rem;
+  }
+}
+@media all and (max-width: 576px) {
+  .logo {
+    margin-left: 0px;
+  }
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.header_cositas {
+  list-style-type: none;
+  display: flex;
+  padding-bottom: 0px;
+  width: 42%;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+@media all and (max-width: 1400px) {
+  .header_cositas {
+    font-size: 1.3rem;
+    width: 62%;
+  }
+}
+@media all and (max-width: 992px) {
+  .header_cositas {
+    width: 74%;
+  }
+}
+@media all and (max-width: 576px) {
+  .header_cositas {
+    font-size: 0.8rem;
+    width: 83%;
+  }
+}
+.header_cositas a {
+  display: inline-block;
+  text-decoration: none;
+}
+.header_hover {
+  color: #AAB7B8;
+}
+.header_hover:hover {
+  color: #e8f4f5;
 }
 
 /* FOOTER */
@@ -400,6 +403,25 @@ footer img {
   color: #cad7d9;
   width: 40%;
 }
+@media all and (max-width: 1400px) {
+  .imagenDeFondo1 .semiTitle {
+    font-size: 1.3rem;
+    width: 85%;
+  }
+}
+@media all and (max-width: 992px) {
+  .imagenDeFondo1 .semiTitle {
+    font-size: 1rem;
+    width: 94%;
+  }
+}
+@media all and (max-width: 576px) {
+  .imagenDeFondo1 .semiTitle {
+    font-size: 0.9rem;
+    width: 98%;
+    margin-top: 0.1rem;
+  }
+}
 .imagenDeFondo1 .accordion-item {
   background-image: url(../assets/gameplayback.jpg);
   background-position: center;
@@ -456,26 +478,6 @@ footer img {
   }
 }
 
-@media all and (max-width: 1400px) {
-  .semiTitle, .imagenDeFondo1.semiTitle {
-    font-size: 1.3rem;
-    width: 85%;
-  }
-}
-@media all and (max-width: 992px) {
-  .semiTitle, .imagenDeFondo1.semiTitle {
-    font-size: 1rem;
-    width: 94%;
-  }
-}
-@media all and (max-width: 576px) {
-  .semiTitle, .imagenDeFondo1.semiTitle {
-    font-size: 0.9rem;
-    width: 98%;
-    margin-top: 0.1rem;
-  }
-}
-
 .semiTitle {
   font-size: 1.56rem;
   color: rgb(27, 38, 49);
@@ -483,6 +485,25 @@ footer img {
   width: 70%;
   margin: auto;
   text-align: center;
+}
+@media all and (max-width: 1400px) {
+  .semiTitle {
+    font-size: 1.3rem;
+    width: 85%;
+  }
+}
+@media all and (max-width: 992px) {
+  .semiTitle {
+    font-size: 1rem;
+    width: 94%;
+  }
+}
+@media all and (max-width: 576px) {
+  .semiTitle {
+    font-size: 0.9rem;
+    width: 98%;
+    margin-top: 0.1rem;
+  }
 }
 .semiTitle_encabezado {
   font-size: 1.9rem;
