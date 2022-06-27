@@ -95,7 +95,6 @@ footer img{
 		width: 40%;
     }
 }
-
 /* Home */
 .portada{
 	display: inline-block;
@@ -301,13 +300,7 @@ footer img{
         }
     }
 }
-.semiTitle{
-	font-size: 1.56rem;
-	color: rgb(27, 38, 49);
-	text-align: center;
-	width: 70%;
-	margin: auto;
-	text-align: center;
+.semiTitle, .imagenDeFondo1.semiTitle{
     @media all and (max-width: 1400px){
         font-size: 1.3rem;
 		width: 85%;
@@ -321,6 +314,14 @@ footer img{
 		width: 98%;
 		margin-top: 0.1rem;
     }
+}
+.semiTitle{
+	font-size: 1.56rem;
+	color: rgb(27, 38, 49);
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	text-align: center;
     &_encabezado{
         font-size: 1.9rem;
         color: rgb(27, 38, 49);

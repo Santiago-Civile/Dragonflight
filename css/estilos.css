@@ -359,6 +359,26 @@ footer img {
   }
 }
 
+@media all and (max-width: 1400px) {
+  .semiTitle, .imagenDeFondo1.semiTitle {
+    font-size: 1.3rem;
+    width: 85%;
+  }
+}
+@media all and (max-width: 992px) {
+  .semiTitle, .imagenDeFondo1.semiTitle {
+    font-size: 1rem;
+    width: 94%;
+  }
+}
+@media all and (max-width: 576px) {
+  .semiTitle, .imagenDeFondo1.semiTitle {
+    font-size: 0.9rem;
+    width: 98%;
+    margin-top: 0.1rem;
+  }
+}
+
 .semiTitle {
   font-size: 1.56rem;
   color: rgb(27, 38, 49);
@@ -366,25 +386,6 @@ footer img {
   width: 70%;
   margin: auto;
   text-align: center;
-}
-@media all and (max-width: 1400px) {
-  .semiTitle {
-    font-size: 1.3rem;
-    width: 85%;
-  }
-}
-@media all and (max-width: 992px) {
-  .semiTitle {
-    font-size: 1rem;
-    width: 94%;
-  }
-}
-@media all and (max-width: 576px) {
-  .semiTitle {
-    font-size: 0.9rem;
-    width: 98%;
-    margin-top: 0.1rem;
-  }
 }
 .semiTitle_encabezado {
   font-size: 1.9rem;
